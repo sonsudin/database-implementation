@@ -1,0 +1,5 @@
+CREATE VIEW datauser AS
+SELECT id_user, username, name
+FROM tbl_users
+INNER JOIN tbl_scraping
+ON id_user = id
