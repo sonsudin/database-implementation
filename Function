@@ -1,0 +1,6 @@
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` FUNCTION `JumlahLikes`() RETURNS INT(11) NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER RETURN 
+(SELECT COUNT(*) AS like_count FROM tbl_scraping where like_count >10000);
+BEGIN
+	SELECT JumlahLikes() AS Jml_akun;
+END$$
