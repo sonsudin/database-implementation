@@ -1,0 +1,13 @@
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `AmbilSatuUser`(IN id_orang INT)
+BEGIN
+	SELECT * FROM tbl_users WHERE id_user = id_orang;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ambilUser`()
+BEGIN
+	SELECT * FROM tbl_users;
+END$$
+DELIMITER ;
